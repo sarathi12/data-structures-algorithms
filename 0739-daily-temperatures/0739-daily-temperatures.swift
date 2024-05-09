@@ -1,15 +1,14 @@
 class Solution {
     func dailyTemperatures(_ temperatures: [Int]) -> [Int] {
-        var answers: [Int] = Array(repeating: 0, count: temperatures.count)
         var stack: [Int] = []
-        for i in 0..<temperatures.count {
-            while !stack.isEmpty, temperatures[i] > temperatures[stack.last!] {
-                let diff = i - stack.last!
-                let index = stack.removeLast()
-                answers[index] = diff
+        var result: [Int] = Array(repeating: 0, count: temperatures.count)
+        for index in 0..<temperatures.count {
+            while !stack.isEmpty && temperatures[index] > temperatures[stack.last!] {
+                let lastIndex = stack.removeLast()
+                result[lastIndex] = index - lastIndex
             }
-            stack.append(i)
+            stack.append(index)
         }
-        return answers
+        return result
     }
 }
