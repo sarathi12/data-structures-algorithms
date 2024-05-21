@@ -1,17 +1,17 @@
 class Solution {
     func topKFrequent(_ nums: [Int], _ k: Int) -> [Int] {
         var output: [Int] = []
-        var countDict: [Int: Int] = [:]
-        var freqCount: [[Int]] = Array(repeating: [], count: nums.count + 1)
+        var countArr: [Int: Int] = [:]
+        var freqCountArr : [[Int]] = Array(repeating: [], count: nums.count + 1)
         for num in nums {
-            countDict[num, default: 0] += 1
+            countArr[num, default: 0] += 1
         }
-        for (key, value) in countDict {
-            freqCount[value].append(key)
+        for (key, value) in countArr {
+            freqCountArr[value].append(key)
         }
-        for countArr in freqCount.reversed() {
-            for val in countArr {
-                output.append(val)
+        for freqArr in freqCountArr.reversed() {
+            for freqElement in freqArr {
+                output.append(freqElement)
                 if output.count == k {
                     return output
                 }
