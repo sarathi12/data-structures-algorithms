@@ -1,45 +1,46 @@
 class Solution {
     func minWindow(_ s: String, _ t: String) -> String {
-        if(t.count > s.count) {
-            return ""
-        }
-        
-        if(t == s) {
+        guard t.count <= s.count else { return "" }
+        if t == s {
             return s
         }
-        let arrString = Array(s)
-        var counterT = [Character:Int]()
-        var windowS = [Character:Int]()
+        let s = Array(s)
+        let t = Array(t)
+        var countS: [Character: Int] = [:]
+        var countT: [Character: Int] = [:]
         for char in t {
-            counterT[char, default: 0] += 1 
+            countT[char, default: 0] += 1
         }
-        var need: Int = counterT.count
-        var have: Int = 0
-        var left = 0
-        var minLength = Int.max
-        var startIdx = -1
-        var endIdx = -1
-        for right in 0..<arrString.count {
-            let char = arrString[right]
-            windowS[char, default: 0] += 1
-            if counterT[char] != nil && windowS[char] == counterT[char] {
-                have += 1
-            }
-            while have == need {
-                if(minLength > (right - left + 1)) {
-                    minLength = right - left + 1
-                    startIdx = left
-                    endIdx = right
+        let keep: Int = countT.count
+        var need: Int = 0
+        var minRange = -1
+        var length: Int = Int.max
+        var left: Int = 0
+        for right in 0..<s.count {
+            let char = s[right]
+            countS[char, default: 0] += 1
+             if let tCountVal = countT[char], let sCountVal = countS[char], tCountVal == sCountVal {
+                 need += 1
+             }
+            
+            while keep == need {
+                let diff = (right - left) + 1
+                if diff < length {
+                    length = diff
+                    minRange = left
                 }
-                windowS[arrString[left]]! -= 1
-                if counterT[arrString[left]] != nil && windowS[arrString[left]]! < counterT[arrString[left]]! {
-                    have -= 1
+                let leftChar = s[left]
+                countS[leftChar, default: 0] -= 1
+                if let tCountVal = countT[leftChar], let sCountVal = countS[leftChar], tCountVal > sCountVal {
+                    need -= 1
                 }
+                
                 left += 1
             }
         }
-        if minLength != Int.max {
-            return String(arrString[startIdx ..< endIdx+1]) 
+        if length < Int.max {
+            let endRange = minRange + length
+            return String(s[minRange..<endRange])
         }
         return ""
         
