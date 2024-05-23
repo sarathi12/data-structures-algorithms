@@ -6,13 +6,10 @@ class Solution {
         var countS: [Character: Int] = [:]
         for right in 0..<s.count {
             let char = s[right]
-            while countS[char] != nil {
-                let leftChar = s[left]
-                
-                countS.removeValue(forKey: leftChar)
-                left += 1
+            if let idx = countS[char], idx >= left {
+                left = idx + 1
             }
-            countS[char, default: 0] += 1
+            countS[char] = right
             if (right - left) + 1 > longest {
                 longest = (right - left) + 1
             }
