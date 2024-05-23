@@ -1,19 +1,22 @@
 class Solution {
     func maxProfit(_ prices: [Int]) -> Int {
-        var profit: Int = 0
-        var buyIdx: Int = 0
-        var sellIdx: Int = buyIdx + 1
-        while sellIdx < prices.count {
-            let diff: Int = prices[sellIdx] -  prices[buyIdx]
-            if(diff > 0) {
-                if diff > profit {
-                    profit = diff
+        var highestProfit: Int = 0
+        var left: Int = 0
+        for right in 0..<prices.count {
+            if right > left {
+                let leftPrice: Int = prices[left]
+                let rightPrice: Int = prices[right]
+                if rightPrice < leftPrice {
+                    left = right
+                } else {
+                    let diff = rightPrice - leftPrice
+                    if diff > highestProfit {
+                        highestProfit = diff
+                    }
                 }
-            } else {
-                buyIdx = sellIdx
             }
-            sellIdx += 1
         }
-        return profit
+        
+        return highestProfit
     }
 }
