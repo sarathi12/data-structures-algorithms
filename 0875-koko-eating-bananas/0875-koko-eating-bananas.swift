@@ -5,14 +5,16 @@ class Solution {
         var right: Int = piles.max()!
         while left <= right {
             let mid = (left + right) / 2
-            var totalTime:Int = 0
+            var totalTime: Int = 0
             for pile in piles {
                 totalTime += Int(ceil(Double(pile) / Double(mid)))
             }
             if totalTime <= h {
-                result = min(result, mid)
+                if mid < result {
+                    result = mid
+                }
                 right = mid - 1
-            } else {
+            }  else {
                 left = mid + 1
             }
         }
