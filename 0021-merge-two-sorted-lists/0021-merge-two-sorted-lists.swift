@@ -26,15 +26,11 @@ class Solution {
             sortedList = sortedList?.next
         }
         
-        while l1 != nil {
+        if l1 != nil {
             sortedList?.next = l1
-            l1 = l1?.next
-            sortedList = sortedList?.next
         }
-        while l2 != nil {
+        else if l2 != nil {
             sortedList?.next = l2
-            l2 = l2?.next
-            sortedList = sortedList?.next
         }
         return dummy?.next
     }
