@@ -3,13 +3,6 @@ class Solution {
         var low: Int = 0
         var high: Int = nums.count - 1
         while low <= high {
-            
-            if nums[high] == target {
-                return high
-            } 
-            if nums[low] == target {
-               return low
-            }
             var mid: Int = (low + high) / 2
             if nums[mid] == target {
                 return mid
