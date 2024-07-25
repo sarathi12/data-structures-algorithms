@@ -5,10 +5,12 @@
 |  |
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/sarathi12/data-structures-algorithms/tree/master/0033-search-in-rotated-sorted-array) |
+| [0074-search-a-2d-matrix](https://github.com/sarathi12/data-structures-algorithms/tree/master/0074-search-a-2d-matrix) |
 ## Binary Search
 |  |
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/sarathi12/data-structures-algorithms/tree/master/0033-search-in-rotated-sorted-array) |
+| [0074-search-a-2d-matrix](https://github.com/sarathi12/data-structures-algorithms/tree/master/0074-search-a-2d-matrix) |
 ## Hash Table
 |  |
 | ------- |
@@ -45,4 +47,8 @@
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/sarathi12/data-structures-algorithms/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0226-invert-binary-tree](https://github.com/sarathi12/data-structures-algorithms/tree/master/0226-invert-binary-tree) |
+## Matrix
+|  |
+| ------- |
+| [0074-search-a-2d-matrix](https://github.com/sarathi12/data-structures-algorithms/tree/master/0074-search-a-2d-matrix) |
 <!---LeetCode Topics End-->
