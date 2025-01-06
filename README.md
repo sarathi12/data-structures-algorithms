@@ -5,6 +5,7 @@
 |  |
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/sarathi12/data-structures-algorithms/tree/master/0033-search-in-rotated-sorted-array) |
+| [0041-first-missing-positive](https://github.com/sarathi12/data-structures-algorithms/tree/master/0041-first-missing-positive) |
 | [0074-search-a-2d-matrix](https://github.com/sarathi12/data-structures-algorithms/tree/master/0074-search-a-2d-matrix) |
 ## Binary Search
 |  |
@@ -14,6 +15,7 @@
 ## Hash Table
 |  |
 | ------- |
+| [0041-first-missing-positive](https://github.com/sarathi12/data-structures-algorithms/tree/master/0041-first-missing-positive) |
 | [0567-permutation-in-string](https://github.com/sarathi12/data-structures-algorithms/tree/master/0567-permutation-in-string) |
 ## Two Pointers
 |  |
