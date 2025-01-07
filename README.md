@@ -7,6 +7,7 @@
 | [0033-search-in-rotated-sorted-array](https://github.com/sarathi12/data-structures-algorithms/tree/master/0033-search-in-rotated-sorted-array) |
 | [0041-first-missing-positive](https://github.com/sarathi12/data-structures-algorithms/tree/master/0041-first-missing-positive) |
 | [0074-search-a-2d-matrix](https://github.com/sarathi12/data-structures-algorithms/tree/master/0074-search-a-2d-matrix) |
+| [0229-majority-element-ii](https://github.com/sarathi12/data-structures-algorithms/tree/master/0229-majority-element-ii) |
 | [0560-subarray-sum-equals-k](https://github.com/sarathi12/data-structures-algorithms/tree/master/0560-subarray-sum-equals-k) |
 ## Binary Search
 |  |
@@ -17,6 +18,7 @@
 |  |
 | ------- |
 | [0041-first-missing-positive](https://github.com/sarathi12/data-structures-algorithms/tree/master/0041-first-missing-positive) |
+| [0229-majority-element-ii](https://github.com/sarathi12/data-structures-algorithms/tree/master/0229-majority-element-ii) |
 | [0560-subarray-sum-equals-k](https://github.com/sarathi12/data-structures-algorithms/tree/master/0560-subarray-sum-equals-k) |
 | [0567-permutation-in-string](https://github.com/sarathi12/data-structures-algorithms/tree/master/0567-permutation-in-string) |
 ## Two Pointers
@@ -59,4 +61,12 @@
 |  |
 | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/sarathi12/data-structures-algorithms/tree/master/0560-subarray-sum-equals-k) |
+## Sorting
+|  |
+| ------- |
+| [0229-majority-element-ii](https://github.com/sarathi12/data-structures-algorithms/tree/master/0229-majority-element-ii) |
+## Counting
+|  |
+| ------- |
+| [0229-majority-element-ii](https://github.com/sarathi12/data-structures-algorithms/tree/master/0229-majority-element-ii) |
 <!---LeetCode Topics End-->
