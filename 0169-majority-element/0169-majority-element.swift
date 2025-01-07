@@ -6,7 +6,6 @@ class Solution {
         var majorityElementCount: [Int: Int] = [:]
         for num in nums {
             majorityElementCount[num, default: 0] += 1
-print(majorityElementCount)
             if majorityElementCount.count > 2 {
                 var newCount: [Int: Int] = [:]
                 for (num, count) in majorityElementCount {
@@ -15,12 +14,9 @@ print(majorityElementCount)
                     }
                 }
                 majorityElementCount = newCount
-                print(majorityElementCount)
             }
 
         }
-        print(targetCount)
-        print(majorityElementCount)
         for (n, _) in majorityElementCount {
             var count: Int = 0
             for num in nums {
@@ -28,7 +24,6 @@ print(majorityElementCount)
                     count += 1
                 }
             }
-            print(count)
             if count > targetCount {
                 result = n
             }
