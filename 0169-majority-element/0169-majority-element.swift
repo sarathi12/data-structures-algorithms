@@ -1,35 +1,13 @@
 class Solution {
     func majorityElement(_ nums: [Int]) -> Int {
-        guard nums.count > 0 else { return 0 }
-        var targetCount: Int = nums.count / 2
         var result: Int = 0
-        var majorityElementCount: [Int: Int] = [:]
+        var count: Int = 0
         for num in nums {
-            majorityElementCount[num, default: 0] += 1
-            if majorityElementCount.count > 2 {
-                var newCount: [Int: Int] = [:]
-                for (num, count) in majorityElementCount {
-                    if (count - 1) >= 0 {
-                        newCount[num] = count - 1
-                    }
-                }
-                majorityElementCount = newCount
+            if count == 0 {
+                result = num
             }
-
+            count += (num == result) ? 1 : -1
         }
-        for (n, _) in majorityElementCount {
-            var count: Int = 0
-            for num in nums {
-                if n == num {
-                    count += 1
-                }
-            }
-            if count > targetCount {
-                result = n
-            }
-        }
-
         return result
-
     }
 }
